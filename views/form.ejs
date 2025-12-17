@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Submit a Movie</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Submit your favorite movie</h1>
+      <% if (error) { %>
+      <div class="error-message">
+        <p><%= error %></p>
+      </div>
+      <% } %>
+
+      <form class="form-container" action="/submit" method="POST">
+        <label for="movieName">Movie Name:</label>
+        <input type="text" id="movieName" name="movieName" />
+
+        <label for="rating">Rating (1–10):</label>
+        <input type="number" id="rating" name="rating" />
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Movies</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>All Submitted Movies</h1>
+      <% if (movies.length === 0) { %>
+      <p>No movies submitted yet.</p>
+      <% } else { %> <% movies.forEach((movie, index) => { %>
+      <div class="movie-card">
+        <li>
+          <strong><%= movie.movieName %></strong> — Rating: <%= movie.rating %>
+        </li>
+        <form action="/delete/<%= index %>" method="POST">
+          <button type="submit" class="delete-btn">Delete</button>
+        </form>
+      </div>
+      <% }) %> <% } %>
+      <div class="btn-group">
+        <a class="btn" href="/">Submit another movie</a>
+      </div>
+    </div>
+  </body>
+</html>

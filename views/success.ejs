@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="success-title">✅ Submission Successful!</h1>
+      <p class="success-msg">You submitted:</p>
+      <ul class="movie-details">
+        <li><strong>Movie:</strong> <%= movieName %></li>
+        <li><strong>Rating:</strong> <%= rating %>/10</li>
+      </ul>
+
+      <div class="btn-group">
+        <a class="btn" href="/">🎬 Submit Another Movie</a>
+        <a class="btn secondary" href="/movies">📋 See All Submitted Movies</a>
+      </div>
+    </div>
+  </body>
+</html>
